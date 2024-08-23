@@ -3,18 +3,20 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+// import CreatePost from './components/CreatePost';
 import CreatePost from './components/CreatePost';
 
 function App() {
   return (
-    <Router>
+     <Router>
       <Navbar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/blogs/:id" component={Blog} />
-        <Route path="/create" component={CreatePost} />
-      </Switch>
-    </Router>
+      <CreatePost />
+        <Route path="/" exact components={Home} />
+        <Route path="/blogs/:id" components={Blog} />
+        <Route path="/Create" components={CreatePost} />
+
+      </Router>
+
   );
 }
 
