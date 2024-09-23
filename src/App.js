@@ -4,6 +4,7 @@ export const App = () => {
   return (
     <div>
       <CreateBlog />
+      
     </div>
   );
 };
